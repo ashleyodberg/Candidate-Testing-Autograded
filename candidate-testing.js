@@ -5,7 +5,7 @@ const input = require('readline-sync'); // Since we are requiring user input thr
 // TODO 1.1a: Define candidateName // 
 let candidateName = ""; //the variable, 'candidateName' has been initialized to an empty string
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question = "Who was the first American woman in space?"; // Initializes the question variable to a string containing the quiz question
+let question = "Who was the first American woman in space? "; // Initializes the question variable to a string containing the quiz question
 let correctAnswer = "Sally Ride"; // correctAnswer variable has been initialized to store the value for the correct answer to the question variable
 let candidateAnswer = ""; //A variable containing an empty string has been initialized to store the user's answer
 
