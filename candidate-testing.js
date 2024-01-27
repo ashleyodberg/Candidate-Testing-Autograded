@@ -1,20 +1,20 @@
 const input = require('readline-sync'); // Since we are requiring user input thr
-// TODO 1.1a: Define candidateName // 
+// TODO 1.1a: Define candidateName //
 let candidateName = ""; //the variable, 'candidateName' has been initialized to an empty string
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question = "Who was the first American woman in space? "; // Initializes the question variable to a string containing the quiz question
 let correctAnswer = "Sally Ride"; // correctAnswer variable has been initialized to store the value for the correct answer to the question variable
 let candidateAnswer = ""; //A variable containing an empty string has been initialized to store the user's answer
 
-//TODO: Variables for Part 2  
+//TODO: Variables for Part 2
 //Here I will be initializing each of these variables to store multiple questions and multiple correct answers, as well as multiple user input responses to each question
 let questions = [
   "Who was the first American woman in space? ",
-  "True or false: 5 kilometers = 5000 meters? ",
+  "True or false: 5 kilometer == 5000 meters? ",
   "(5 + 3)/2 * 10 = ? ",
   "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
-  "What is the minimum crew size for the ISS? " 
-]; 
+  "What is the minimum crew size for the ISS? "
+];
 let correctAnswers = [
   "Sally Ride",
   "true",
@@ -45,7 +45,7 @@ function gradeQuiz(candidateAnswers) {
     console.log(`\n${i + 1}) ${questions[i]}`);
     console.log(`Your Answer: ${candidateAnswers[i]}`);
     console.log(`Correct Answer: ${correctAnswers[i]}`);
-    // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly 
+    // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly
     // defines the gradeQuiz function which checks to see if a candidate's answer was correct, and then scores the answer with a 1 if it was correct or a 0 for incorrect
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       console.log("Your answer is correct!");
@@ -55,11 +55,11 @@ function gradeQuiz(candidateAnswers) {
       console.log("Sorry, your answer is incorrect.");
       // grade = 0; //assign a score of 0 for an incorrect answer
     }
-  //  return grade; //trying moving this here to see if it solves my issue
+  //  return grade; //trying moving this here to see if it solves my issue; update: did not solve the issue - this comment was made prior to covering functions in class. Oops.
   }
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
   grade = (totalCorrect / questions.length) * 100; //this line calculates the percentage of correct candidate answers they've input
-  
+
   return grade;
 }
 
