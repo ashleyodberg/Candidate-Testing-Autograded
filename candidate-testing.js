@@ -57,8 +57,11 @@ function gradeQuiz(candidateAnswers) {
     }
   //  return grade; //trying moving this here to see if it solves my issue; update: did not solve the issue - this comment was made prior to covering functions in class. Oops.
   }
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-  grade = (totalCorrect / questions.length) * 100; //this line calculates the percentage of correct candidate answers they've input
+
+  let grade = (totalCorrect / questions.length) * 100;;  //TODO 3.2 use this variable to calculate the candidates score.
+
+  console.log(`\n>>> Overall Grade: ${grade}% (${totalCorrect} of ${questions.length} responses correct) <<<`);
+  console.log(`>>> Status: ${grade >= 80 ? "PASSED" : "FAILED"} <<<`);
 
   return grade;
 }
